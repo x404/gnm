@@ -138,11 +138,6 @@ input::-moz-focus-inner {
 
 @font-face {
   font-family: 'BauhausLightCTT';
-  src: local("BauhausLightCTT"), url("../fonts/bauhauslightctt.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'BauhausLightCTT';
   src: url("../fonts/bauhauslightctt.woff") format("woff"), url("../fonts/bauhauslightctt.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -687,6 +682,12 @@ footer {
   padding: 2.9rem 0 2rem;
 }
 
+.content .bauhaus,
+.content .bauhaus h1 {
+  font-family: 'BauhausLightCTT', arial;
+  font-weight: normal;
+}
+
 .content main {
   line-height: 1.5;
   margin-top: 1rem;
@@ -706,7 +707,7 @@ footer {
 .subnav {
   font-size: 15px;
   font-size: 1.5rem;
-  margin: 4.5rem 0;
+  margin: 4.5rem 0 3.5rem;
 }
 
 .subnav ul {
