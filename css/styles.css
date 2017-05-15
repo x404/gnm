@@ -190,6 +190,10 @@ input::-moz-focus-inner {
   display: none;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /* =top
 ---------------------------*/
 .top {
@@ -329,8 +333,17 @@ input::-moz-focus-inner {
 /* =footer
 ---------------------------*/
 footer {
-  height: 40px;
-  background: #FFCC00;
+  border-top: 1px solid #e2e2e2;
+  padding: 2.5rem 0;
+}
+
+/* =/footer
+---------------------------*/
+#to-top {
+  bottom: 13px;
+  position: fixed;
+  left: 50%;
+  margin-left: 575px;
 }
 
 #foo1 .slide {
@@ -515,6 +528,16 @@ footer {
 
 /* =/about
 ---------------------------*/
+.publications header,
+.gallery header {
+  text-align: center;
+}
+
+.publications header h1,
+.gallery header h1 {
+  font-weight: normal;
+}
+
 /* =publications
 ---------------------------*/
 .publications {
@@ -525,12 +548,10 @@ footer {
 
 .publications header {
   padding-bottom: 6rem;
-  text-align: center;
 }
 
 .publications header h1 {
   color: #398eab;
-  font-weight: normal;
 }
 
 .publications ol {
@@ -564,6 +585,57 @@ footer {
 }
 
 /* =/publications
+---------------------------*/
+/* =gallery
+---------------------------*/
+.gallery {
+  background-color: #398eab;
+  padding: 8.5rem 0 13rem;
+}
+
+.gallery header {
+  margin-bottom: 10rem;
+}
+
+.gallery h1 {
+  color: #fff;
+}
+
+.gallery .row {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+
+.gallery .cell {
+  font-size: 26px;
+  font-size: 2.6rem;
+  background-color: #165267;
+  color: #fff;
+  flex-basis: 25%;
+  text-align: center;
+  font-weight: bold;
+  min-height: 255px;
+}
+
+.gallery .cell img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery .cell p {
+  margin-top: 1rem;
+}
+
+/* =/gallery
 ---------------------------*/
 ::-ms-clear {
   display: none;
