@@ -4,6 +4,7 @@
     A set of useful SCSS mixins
   ---------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,700i&subset=cyrillic,cyrillic-ext");
+@import url(http://allfont.ru/allfont.css?fonts=bauhaus-light);
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -136,8 +137,15 @@ input::-moz-focus-inner {
 }
 
 @font-face {
-  font-family: 'bauhaus';
-  src: url("../fonts/BauhausLight.ttf") format("truetype");
+  font-family: 'BauhausLightCTT';
+  src: local("BauhausLightCTT"), url("../fonts/bauhauslightctt.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'BauhausLightCTT';
+  src: url("../fonts/bauhauslightctt.woff") format("woff"), url("../fonts/bauhauslightctt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .tdn {
@@ -341,9 +349,9 @@ footer {
 ---------------------------*/
 #to-top {
   bottom: 13px;
-  position: fixed;
   left: 50%;
-  margin-left: 575px;
+  margin-left: 545px;
+  position: fixed;
 }
 
 #foo1 .slide {
@@ -430,11 +438,10 @@ footer {
 .about header {
   color: #208209;
   text-align: center;
-  margin: 7rem 0;
+  margin: 7rem 0 9.5rem;
 }
 
 .about header h1 {
-  font-family: 'bauhaus';
   font-size: 36px;
   font-size: 3.6rem;
   font-weight: normal;
@@ -458,7 +465,7 @@ footer {
 }
 
 .about .item-left .num {
-  right: -50px;
+  left: 288px;
 }
 
 .about .item-right .pic {
@@ -466,12 +473,12 @@ footer {
 }
 
 .about .item-right .num {
-  left: -50px;
+  right: 288px;
 }
 
 .about .item-right .text {
   order: 0;
-  padding-right: 9rem;
+  padding-right: 8.5rem;
   text-align: right;
 }
 
@@ -484,13 +491,13 @@ footer {
   color: #fff;
   font-family: Georgia;
   font-weight: bold;
-  height: 100px;
+  height: 105px;
   line-height: 1;
+  padding-top: 1.3rem;
   position: absolute;
   text-align: center;
-  top: calc(50% - 50px);
-  width: 100px;
-  padding-top: 1.3rem;
+  top: calc(50% - 56px);
+  width: 105px;
 }
 
 .about h2 {
@@ -529,12 +536,15 @@ footer {
 /* =/about
 ---------------------------*/
 .publications header,
-.gallery header {
+.gallery header,
+.about header {
   text-align: center;
 }
 
 .publications header h1,
-.gallery header h1 {
+.gallery header h1,
+.about header h1 {
+  font-family: 'BauhausLightCTT', arial;
   font-weight: normal;
 }
 
@@ -542,8 +552,8 @@ footer {
 ---------------------------*/
 .publications {
   background-color: #f1f8fb;
-  padding: 4rem 0 4.5rem;
-  line-height: 1.5;
+  padding: 3.5rem 0 4.5rem;
+  line-height: 1.6;
 }
 
 .publications header {
@@ -607,11 +617,6 @@ footer {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  align-items: center;
 }
 
 .gallery .cell {
@@ -622,7 +627,8 @@ footer {
   flex-basis: 25%;
   text-align: center;
   font-weight: bold;
-  min-height: 255px;
+  height: 255px;
+  overflow: hidden;
 }
 
 .gallery .cell img {
@@ -633,6 +639,31 @@ footer {
 
 .gallery .cell p {
   margin-top: 1rem;
+}
+
+.gallery .cell-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gallery .cell-photo img {
+  width: 100%;
+  height: auto;
+  -webkit-transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+}
+
+.gallery .cell-photo:hover img {
+  transform: scale(1.1);
 }
 
 /* =/gallery
