@@ -148,6 +148,13 @@ input::-moz-focus-inner {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'helveticaneuecyrbold';
+  src: url("../fonts/helveticaneuecyr-bold.woff2") format("woff2"), url("../fonts/helveticaneuecyr-bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .tdn {
   text-decoration: none;
 }
@@ -164,7 +171,7 @@ input::-moz-focus-inner {
   text-decoration: none;
 }
 
-.before, .header nav ul li:after {
+.before, .header nav ul li:after, .cat-gallery a:after, .cat-gallery a:before {
   content: "";
   display: block;
   position: absolute;
@@ -276,6 +283,7 @@ input::-moz-focus-inner {
   font-size: 18px;
   font-size: 1.8rem;
   color: #208209;
+  cursor: default;
   font-weight: bold;
 }
 
@@ -667,6 +675,190 @@ footer {
 }
 
 /* =/gallery
+---------------------------*/
+.content .title {
+  background: #011844 url(../images/title-bg.jpg) no-repeat left top/cover;
+  min-height: 90px;
+}
+
+.content h1 {
+  font-family: 'helveticaneuecyrbold';
+  color: #fff;
+  padding: 2.9rem 0 2rem;
+}
+
+.content main {
+  line-height: 1.5;
+  margin-top: 1rem;
+  padding: 3.5rem 0 4.3rem;
+}
+
+.content main h2 {
+  color: #208209;
+}
+
+.content main p {
+  margin: .8rem 0;
+}
+
+/* =subnav
+---------------------------*/
+.subnav {
+  font-size: 15px;
+  font-size: 1.5rem;
+  margin: 4.5rem 0;
+}
+
+.subnav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.subnav ul li {
+  margin-right: 3.5rem;
+}
+
+.subnav ul li:last-child {
+  margin-right: 0;
+}
+
+.subnav ul li a {
+  text-decoration: none;
+}
+
+.subnav ul li a:hover {
+  color: #208209;
+}
+
+.subnav ul li.active {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #208209;
+  font-weight: bold;
+}
+
+/* =/subnav
+---------------------------*/
+/* =cat-gallery
+---------------------------*/
+.cat-gallery {
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.cat-gallery a {
+  flex-basis: 24%;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.cat-gallery a img {
+  width: 100%;
+}
+
+.cat-gallery a:hover:after, .cat-gallery a:hover:before {
+  opacity: 1;
+}
+
+.cat-gallery a:hover .tooltip {
+  opacity: 1;
+}
+
+.cat-gallery a:after, .cat-gallery a:before {
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+}
+
+.cat-gallery a:before {
+  background: url(../images/zoom.png) no-repeat;
+  width: 58px;
+  height: 58px;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  margin-left: -28px;
+  margin-top: -38px;
+}
+
+.cat-gallery a:after {
+  background-color: rgba(255, 255, 255, 0.75);
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.cat-gallery a .tooltip {
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  font-size: 16px;
+  font-size: 1.6rem;
+  bottom: 10px;
+  color: #208209;
+  display: block;
+  left: 12px;
+  position: absolute;
+  z-index: 101;
+  opacity: 0;
+}
+
+/* =/cat-gallery
+---------------------------*/
+/* =pagination
+---------------------------*/
+.pagination {
+  font-size: 18px;
+  font-size: 1.8rem;
+  text-align: right;
+  margin: 2.3rem 0;
+}
+
+.pagination a, .pagination span {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 .3rem;
+}
+
+.pagination span {
+  color: #208209;
+}
+
+.pagination .prev,
+.pagination .next {
+  background: url(../images/prevnext.png) no-repeat left 0px;
+  height: 25px;
+  position: relative;
+  top: -2px;
+  vertical-align: top;
+  width: 9px;
+}
+
+.pagination .prev:hover,
+.pagination .next:hover {
+  background-position: -11px top;
+}
+
+.pagination .prev.disable,
+.pagination .next.disable {
+  background-position: -11px top;
+}
+
+.pagination .prev {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* =/pagination
 ---------------------------*/
 ::-ms-clear {
   display: none;

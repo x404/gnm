@@ -9,6 +9,27 @@ $(document).ready(function(){
 		navText: ["", ""]
 	});
 
+
+		// прячем кнопку #back-top
+		$("#to-top").hide();
+	
+		$(window).scroll(function (){
+			if ($(this).scrollTop() > 200){
+				$("#to-top").fadeIn();
+			} else{
+				$("#to-top").fadeOut();
+			}
+		});
+
+		// при клике на ссылку плавно поднимаемся вверх
+		$("#to-top").click(function (){
+			$("body,html").animate({
+				scrollTop:0
+			}, 800);
+			return false;
+		});
+
+
 });
 
 // =заглушка для IE

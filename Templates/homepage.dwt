@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+
+<meta name="robots" content="noindex,nofollow" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Главная</title>
+<!-- TemplateEndEditable -->
+<link rel="stylesheet" href="../css/styles.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/jquery-1.12.4.min.js"><\/script>')</script>
+
+<!--[if !IE]><!-->
+<script>if(/*@cc_on!@*/false){document.documentElement.className+=' ie10';}</script>
+<!--<![endif]-->
+
+<!--[if IE]>
+	<link href="css/styles-ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+<body>
+
+
+<div class="outerwrapper">
+	<!-- =top -->
+	<div class="top">
+		<div class="container">
+			<a href="#" title="" target="_blank"><img src="../images/vk.png" alt="Вконтакте" /></a>
+			<a href="#" title="" target="_blank"><img src="../images/fb.png" alt="Facebook" /></a>
+			<a href="#" title="" target="_blank"><img src="../images/instagram.png" alt="instagram" /></a>
+		</div>
+	</div>
+	<!-- =/top -->
+
+
+	<!-- =header -->
+	<header class="header">
+		<div class="container">
+			<div class="flexbox">
+				<a href="/" class="logo"><img src="../images/logo.png" alt="Герман Николаевич Мансуров" /></a>
+				<nav>
+					<ul>
+						<!-- TemplateBeginEditable name="EditRegion4" -->
+						<li class="active"><span>Главная</span></li>
+						<li><a href="#" title="">Обо мне</a></li>
+						<li><a href="#" title="">Публикации</a></li>
+						<li><a href="#" title="">Фотогалерея</a></li>
+						<li><a href="#" title="">Контакты</a></li>						
+						<!-- TemplateEndEditable -->						
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<!-- =/header -->
+	
+	<!-- TemplateBeginEditable name="EditRegion3" -->
+	<!-- TemplateEndEditable -->	
+</div>
+
+<!-- =footer -->
+<footer>
+	<p class="text-center">Copyright © Mansurov G. 2010-2017. All rights reserved</p>
+</footer>
+<!-- =/footer -->
+
+<a href="#" id="to-top" title="Вверх"><img src="../images/up.png" alt="Вверх" /></a>
+
+
+<div id="outdated"></div>
+<link rel="stylesheet" property="stylesheet" href="../outdatedbrowser/outdatedbrowser.min.css" />
+<script src="../outdatedbrowser/outdatedbrowser.min.js"></script>
+
+<script src="../js/owl.carousel.min.js"></script>
+<link rel="stylesheet" property="stylesheet" href="../css/owl.carousel.css" />
+
+<link  href="../css/jquery.fancybox.css" rel="stylesheet" property="stylesheet" />
+<script src="../js/jquery.fancybox.min.js"></script>
+
+<script src="../js/engine.js"></script>
+</body>
+</html>
