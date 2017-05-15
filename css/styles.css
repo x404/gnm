@@ -1,1 +1,411 @@
-@import url("elements.scss");html,body,ul,ol,li,dl,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,a,img,label{margin:0;padding:0;border:0}header,section,footer,aside,nav,article{display:block}ul{list-style:none}*{box-sizing:border-box}*:before,*:after{box-sizing:border-box}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:62.5%}body{display:-webkit-flex;display:-moz-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:column;-ms-flex-flow:column;flex-flow:column;font-display:swap;height:100vh;font-size:14px;font-size:1.4rem;border-radius:2px}html,body{height:100%}*:focus{outline:none}input::-moz-focus-inner{border:0;padding:0}.outerwrapper{-webkit-flex:1;-ms-flex:1;flex:1}p{line-height:16px}a{color:#020000}h1{font-size:2.5rem}h2{font-size:2.4rem}h3{font-size:1.6rem}*:focus{outline:none}input::-moz-focus-inner{border:0;padding:0}@font-face {}.tdn{text-decoration:none}.tdn:hover{text-decoration:underline}.tdu{text-decoration:underline}.tdu:hover{text-decoration:none}.before{content:"";display:block;position:absolute}.form-control{border:1px solid #f4f4f4;border-radius:0;margin-top:0.6rem;font-size:16px}.form-control:focus,.form-control:active{border-color:#666;box-shadow:0 1px 1px rgba(0,0,0,0.075) inset,0 0 8px rgba(222,72,111,0.3)}.owl-carousel .owl-controls{position:absolute;width:100%;top:115px}.owl-carousel .owl-controls .owl-buttons .owl-prev,.owl-carousel .owl-controls .owl-buttons .owl-next{background:url(../images/prevnext.png) no-repeat left top;width:65px;height:65px;position:absolute}.owl-carousel .owl-controls .owl-buttons .owl-prev{left:-110px}.owl-carousel .owl-controls .owl-buttons .owl-next{background-image:url(../images/sprite.png);background-repeat:no-repeat;background-position:0 0;right:-110px}footer{height:40px;background:#FFCC00}::-ms-clear{display:none}
+/*---------------------------------------------------
+    SCSS Elements 0.1
+  ---------------------------------------------------
+    A set of useful SCSS mixins
+  ---------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,700i&subset=cyrillic,cyrillic-ext");
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 730px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 940px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .container {
+    width: 1050px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/*** reset ***********/
+html, body, ul, ol, li, dl, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, a, img, label {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+header, section, footer, aside, nav, article {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: column;
+  font-display: swap;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+html, body {
+  height: 100%;
+}
+
+*:focus {
+  outline: none;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.outerwrapper {
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+/*** standart classes *****/
+p {
+  line-height: 16px;
+}
+
+a {
+  color: #020000;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+*:focus {
+  outline: none;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+@font-face {}.tdn {
+  text-decoration: none;
+}
+
+.tdn:hover {
+  text-decoration: underline;
+}
+
+.tdu {
+  text-decoration: underline;
+}
+
+.tdu:hover {
+  text-decoration: none;
+}
+
+.before, .header nav ul li:after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.form-control {
+  border: 1px solid #f0f8ee;
+  border-radius: 0;
+  margin-top: 0.6rem;
+  font-size: 16px;
+}
+
+.form-control:focus, .form-control:active {
+  border-color: #208209;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(222, 72, 111, 0.3);
+}
+
+.flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.submit {
+  cursor: pointer;
+}
+
+.show-sm {
+  display: none;
+}
+
+/* =top
+---------------------------*/
+.top {
+  background: #f0f8ee;
+  padding: .6rem 0 .4rem;
+  border-bottom: 1px solid #e2e2e2;
+  text-align: right;
+}
+
+.top a {
+  display: inline-block;
+  background: url(../images/social-bg.png) no-repeat left top;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+}
+
+.top a img {
+  vertical-align: top;
+}
+
+/* =/top
+---------------------------*/
+/* =header
+---------------------------*/
+.header .flexbox {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  min-height: 96px;
+}
+
+.header .logo img {
+  vertical-align: top;
+}
+
+.header nav {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+.header nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+
+.header nav ul a {
+  text-decoration: none;
+}
+
+.header nav ul li {
+  position: relative;
+  padding-right: 2.3rem;
+}
+
+.header nav ul li.active {
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #208209;
+  font-weight: bold;
+}
+
+.header nav ul li:last-child {
+  padding-right: 0;
+}
+
+.header nav ul li:last-child:after {
+  display: none;
+}
+
+.header nav ul li:after {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #424242;
+  right: .9rem;
+  top: 8px;
+}
+
+.header nav ul li a {
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+.header nav ul li a:hover {
+  color: #208209;
+}
+
+/* =/header
+---------------------------*/
+/* =navigation
+---------------------------*/
+/* =/navigation
+---------------------------*/
+.owl-carousel .owl-controls {
+  position: absolute;
+  width: 100%;
+  top: 115px;
+}
+
+.owl-carousel .owl-controls .owl-buttons .owl-prev,
+.owl-carousel .owl-controls .owl-buttons .owl-next {
+  background: url(../images/prevnext.png) no-repeat left top;
+  width: 65px;
+  height: 65px;
+  position: absolute;
+}
+
+.owl-carousel .owl-controls .owl-buttons .owl-prev {
+  left: -110px;
+}
+
+.owl-carousel .owl-controls .owl-buttons .owl-next {
+  background-image: url(../images/sprite.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  right: -110px;
+}
+
+/* =main
+---------------------------*/
+/* =footer
+---------------------------*/
+footer {
+  height: 40px;
+  background: #FFCC00;
+}
+
+#foo1 .slide {
+  font-size: 30px;
+  font-size: 3rem;
+  color: #fff;
+  height: 700px;
+  line-height: 1.2;
+}
+
+#foo1 .slide .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+#foo1 .slide-inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 5.5rem;
+}
+
+#foo1 .slide-title {
+  font-size: 48px;
+  font-size: 4.8rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+#foo1 .slide .bg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+#foo1 .owl-nav {
+  position: absolute;
+  top: calc(50% - 37px);
+  width: 100%;
+}
+
+#foo1 .owl-nav .owl-prev,
+#foo1 .owl-nav .owl-next {
+  background: url(../images/owl-arrow.png) no-repeat left top;
+  height: 76px;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  width: 27px;
+}
+
+#foo1 .owl-nav .owl-prev {
+  margin-left: -585px;
+}
+
+#foo1 .owl-nav .owl-next {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: 585px;
+}
+
+::-ms-clear {
+  display: none;
+}

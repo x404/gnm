@@ -34,23 +34,95 @@
 </head>
 <body>
 
+
 <div class="outerwrapper">
-    <header>А я тут вместо головы.</header>
-    <div class="main">
-		Пароль отправляется серверу в «открытом» виде — он шифруется известным алгоритмом на известном ключе. При использовании простого логина, пароль пользователя может быть перехвачен и дешифрирован.
-    </div>
+	<!-- =top -->
+	<div class="top">
+		<div class="container">
+			<a href="#" title="" target="_blank"><img src="../images/vk.png" alt="Вконтакте" /></a>
+			<a href="#" title="" target="_blank"><img src="../images/fb.png" alt="Facebook" /></a>
+			<a href="#" title="" target="_blank"><img src="../images/instagram.png" alt="instagram" /></a>
+		</div>
+	</div>
+	<!-- =/top -->
+
+
+	<!-- =header -->
+	<header class="header">
+		<div class="container">
+			<div class="flexbox">
+				<a href="/" class="logo"><img src="../images/logo.png" alt="Герман Николаевич Мансуров" /></a>
+				<nav>
+					<ul>
+						<li class="active"><span>Главная</span></li>
+						<li><a href="#" title="">Обо мне</a></li>
+						<li><a href="#" title="">Публикации</a></li>
+						<li><a href="#" title="">Фотогалерея</a></li>
+						<li><a href="#" title="">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<!-- =/header -->
+
+
+	<!-- =carousel -->
+	<div class="owl-carousel" id="foo1">
+		<div class="slide">
+			<img src="tmp/slide-1.jpg" class="bg" alt="" />
+			<div class="container">
+				<div class="slide-inner">
+					<div class="slide-title">Сюда можно вставить</div>
+					<div class="slide-text">
+						какие то высказывания, <br> цитаты или фотографии из фотогалереи <br> и их названия
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<img src="tmp/slide-2.jpg" class="bg" alt="" />
+			<div class="container">
+				<div class="slide-inner">
+					<div class="slide-title">Сюда вставить можно</div>
+					<div class="slide-text">
+						какие то высказывания, <br> цитаты или фотографии из фотогалереи <br> и их названия
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slide">
+			<img src="tmp/slide-3.jpg" class="bg" alt="" />
+			<div class="container">
+				<div class="slide-inner">
+					<div class="slide-title">Вставить сюда можно</div>
+					<div class="slide-text">
+						какие то высказывания, <br> цитаты или фотографии из фотогалереи <br> и их названия
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- =/carousel -->
 </div>
 
+
+
+<!-- =footer -->
 <footer>
 	<div class="wrapper">
 		А тут у меня — ноги приделаны.
 	</div>
 </footer>
+<!-- =/footer -->
 
 
 <div id="outdated"></div>
 <link rel="stylesheet" property="stylesheet" href="outdatedbrowser/outdatedbrowser.min.css" />
 <script src="outdatedbrowser/outdatedbrowser.min.js"></script>
+
+<script src="js/owl.carousel.min.js"></script>
+<link rel="stylesheet" property="stylesheet" href="css/owl.carousel.css" />
 
 <script src="https://ajax.microsoft.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery.validate.min.js"><\/script>')</script>
