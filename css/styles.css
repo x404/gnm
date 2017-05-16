@@ -1002,6 +1002,10 @@ footer {
   .top {
     text-align: center;
   }
+  .header .logo {
+    margin-left: 90px;
+    margin-top: 7px;
+  }
 }
 
 @media (max-width: 1500px) {
@@ -1208,7 +1212,8 @@ footer {
     font-size: 16px;
     font-size: 1.6rem;
   }
-  .publications {
+  .publications,
+  main {
     text-align: justify;
   }
 }
