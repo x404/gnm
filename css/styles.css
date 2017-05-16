@@ -880,6 +880,61 @@ footer {
   display: none;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body {
+    display: block;
+  }
+  .top a {
+    vertical-align: top;
+  }
+  .outerwrapper {
+    display: block !important;
+    flex: 0;
+  }
+  .header .logo {
+    margin-top: 2rem;
+  }
+  .header nav {
+    margin-top: 1.5rem;
+  }
+  .content main {
+    display: block;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (max-width: 768px), (-ms-high-contrast: none) and (max-width: 768px) {
+  .header .logo {
+    margin-top: 1rem;
+  }
+}
+
+.ie10 body {
+  display: block;
+}
+
+.ie10 .top a {
+  vertical-align: top;
+}
+
+.ie10 .outerwrapper {
+  display: block !important;
+  flex: 0;
+}
+
+.ie10 .header .logo {
+  display: block;
+  margin-top: 2rem;
+}
+
+.ie10 .header nav {
+  display: block;
+  margin-top: 1.5rem;
+}
+
+.ie10 .content main {
+  display: block;
+}
+
 @media (max-width: 1150px) {
   #to-top {
     margin-left: 430px;
