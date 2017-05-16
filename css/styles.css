@@ -204,6 +204,11 @@ input::-moz-focus-inner {
   text-align: center;
 }
 
+.navbar-toggle,
+.close-menu {
+  display: none;
+}
+
 /* =top
 ---------------------------*/
 .top {
@@ -878,6 +883,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .header .flexbox {
+    min-height: 69px;
+  }
   .header nav {
     display: none;
     position: absolute;
@@ -885,6 +893,108 @@ footer {
   .header .logo {
     margin-left: auto;
     margin-right: auto;
+  }
+  .header .logo img {
+    width: 95%;
+  }
+  .navbar-toggle {
+    background-color: #208209;
+    border: none;
+    cursor: pointer;
+    display: block;
+    height: 70px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 35px;
+    width: 70px;
+    z-index: 99;
+  }
+  .navbar-toggle .icon-bar {
+    background-color: #fff;
+    display: block;
+    height: 2px;
+    margin: 8px auto;
+    width: 30px;
+  }
+  .navbar-toggle:hover {
+    opacity: .8;
+  }
+  .o-menu .close-menu {
+    display: block;
+    transform: translate(0, 0);
+  }
+  .o-menu #navbar {
+    display: block;
+    transform: translate(-15px, 0);
+    z-index: 9999;
+  }
+  .close-menu {
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    display: block;
+    transform: translate(-320px, 0);
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    left: 215px;
+    background-color: #208209;
+    border: none;
+    height: 70px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    z-index: 99;
+  }
+  #navbar {
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    background-color: #208209;
+    color: #208209;
+    display: block;
+    left: 0;
+    padding-top: 12px;
+    position: absolute;
+    top: 0;
+    transform: translate(-305px, 0);
+    width: 230px;
+  }
+  #navbar .container {
+    padding: 0;
+  }
+  #navbar ul {
+    background: none;
+    display: block;
+    font-size: 15px;
+    margin-top: 0;
+    padding-left: 15px;
+  }
+  #navbar ul li {
+    border-bottom: 1px solid #fff;
+  }
+  #navbar ul li a, #navbar ul li span {
+    color: #fff;
+    display: block;
+    height: auto;
+    line-height: normal;
+    padding: 18px 0 18px 10px;
+    text-decoration: none;
+    text-transform: none;
+  }
+  #navbar ul li a:hover, #navbar ul li span:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  #navbar ul li.active, #navbar ul li:hover {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+  }
+  #navbar ul li.active a, #navbar ul li.active span, #navbar ul li:hover a, #navbar ul li:hover span {
+    background: none;
+  }
+  #navbar ul li:after {
+    display: none;
   }
 }
 
