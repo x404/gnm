@@ -66,6 +66,12 @@
 				</nav>
 			</div>
 		</div>
+		<button type="button" class="navbar-toggle">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<button type="button" class="close-menu"><img src="../images/close-modal.png" alt=""></button>
 	</header>
 	<!-- =/header -->
 	
