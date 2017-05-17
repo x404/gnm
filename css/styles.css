@@ -1107,6 +1107,9 @@ footer {
   #foo1 .owl-nav .owl-next {
     margin-left: 440px;
   }
+  .about .num {
+    padding-top: 1.5rem;
+  }
 }
 
 @media (max-width: 991px) {

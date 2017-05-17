@@ -1,0 +1,277 @@
+#foo1{
+	.slide{
+		@include font-size(3);
+		color: $color2;
+		height: 700px;
+		line-height: 1.2;
+		.container{
+			@include flexbox;
+			height: 100%;
+		}
+		&-inner{
+			@include flexbox;
+			@include justify-content(flex-end);
+			flex-direction: column;
+			height: 100%;
+			padding-bottom: 5.5rem;
+		}
+		&-title{
+			@include font-size(4.8);
+			font-weight: bold;
+			line-height: 1.2;
+		}
+
+		.bg{
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: -1;
+		}
+	}
+
+	.owl-nav{
+		position: absolute;
+		top: calc(50% - 37px);
+		width: 100%;
+		.owl-prev,
+		.owl-next{
+			background: url(../images/owl-arrow.png) no-repeat left top;
+			height: 76px;
+			left: 50%;
+			position: absolute;
+			top: 0;
+			width: 27px;
+		}
+		$x : 585px;
+		.owl-prev{
+			margin-left: -$x;
+		}
+		.owl-next{
+			@include rotation(180deg);
+			margin-left: $x;
+		}
+	}
+}
+
+
+.about,
+.publications,
+.gallery
+{
+	h1{
+		font-family: 'BauhausLightCTT';		
+	}	
+}
+
+/* =about
+---------------------------*/
+.about{
+	$color: $color5;
+	margin-bottom: 10rem;
+	header{
+		color: $color5;
+		text-align: center;
+		margin: 7rem 0 9.5rem;
+		h1{
+			@include font-size(3.6);
+			font-weight: normal;			
+		}
+	}
+	.item{
+		@include drop-shadow(0,0,10px,.5);
+		@include flexbox;
+		@include align-items(center);
+		border-radius: 5px;
+		margin: 4rem 0;
+
+		&-left{
+			.pic{
+				// margin-right: 7.7rem;
+			}
+			.num{
+				// right: -39px;
+				left: 288px;
+			}
+		}
+		&-right{
+			.pic{
+				// margin-right: 7.7rem;
+				order: 1;
+			}
+			.num{
+				right: 288px;
+			}
+
+			.text{
+				order: 0;
+				padding-right: 8.5rem;
+				text-align: right;
+			}
+		}
+	}
+	.num{
+		@include font-size(6);
+		background-color: $color;
+		border-radius: 8px;
+		border: 2px solid $color2;
+		color: $color2;
+		font-family: Georgia;
+		font-weight: bold;
+		height: 105px;
+		line-height: 1;
+		padding-top: 1.3rem;
+		position: absolute;
+		text-align: center;
+		top: calc(50% - 56px);
+		width: 105px;
+	}
+
+	h2{
+		color: $color;
+		@include font-size(1.8);
+	}
+	a{
+		color: $color;
+	}
+
+	.pic{
+		position: relative;
+		img{
+			vertical-align: top;
+		}
+	}
+
+	.text{
+		line-height: 1.6;
+		flex-grow: 1;
+		padding-left: 7.5rem;
+		padding-right: 4rem;
+		h2{
+			padding-bottom: .5rem;
+		}
+		.more{
+			font-weight: bold;
+			@extend .tdu;
+		}
+	}
+}
+/* =/about
+---------------------------*/
+
+.publications,
+.gallery,
+.about
+{
+	header{
+		text-align: center;
+		h1{
+			
+			font-weight: normal;
+		}
+	}
+}
+
+
+/* =publications
+---------------------------*/
+
+
+.publications{
+	background-color: $color9;
+	padding: 3.5rem 0 4.5rem;
+	line-height: 1.6;
+	header{
+		padding-bottom: 6rem;
+		
+		h1{
+			color: $color8;
+		}
+	}
+
+	ol{
+		list-style-position: inside;
+	}
+	h2{
+		padding-bottom: .5rem;
+	}
+
+	.more{
+		padding-top: 7rem;
+		text-align: center;
+	}
+	.more-btn{
+		@include font-size(1.8);
+		background-color: $color8;
+		border-radius: 5px;
+		color: $color2;
+		display: inline-block;
+		text-decoration: none;
+		padding: .5rem 2rem;
+		@include transition-param(opacity);
+		&:hover{
+			opacity: .8;
+		}
+	}
+}
+/* =/publications
+---------------------------*/
+
+
+
+/* =gallery
+---------------------------*/
+.gallery{
+	background-color: $color8;
+	padding: 8.5rem 0 13rem;
+	header{
+		margin-bottom: 10rem;
+	}
+	h1{
+		color: $color2;
+	}
+	.row{
+		@include justify-content(space-between);
+	}
+	.cell{
+		@include font-size(2.6);
+		// @include flexbox;
+		background-color: $color10;
+		color: $color2;
+		flex-basis: 25%;
+		text-align: center;
+		font-weight: bold;
+		height: 255px;
+		overflow: hidden;
+		img{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		p{
+			margin-top: 1rem;
+		}
+
+		&-title{
+			@include flexbox;
+			@include justify-content(center);
+			flex-direction: column;			
+		}
+
+		&-photo{
+			img{
+				width: 100%;
+				height: auto;
+				@include transition-param(transform);
+			}
+			&:hover{
+				img{
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}
+/* =/gallery
+---------------------------*/

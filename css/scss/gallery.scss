@@ -1,0 +1,136 @@
+/* =subnav
+---------------------------*/
+.subnav{
+	@include font-size(1.5);
+	margin: 4.5rem 0 3.5rem;
+	ul{
+		@include flexbox;
+		li{
+			margin-right: 3.5rem;
+			&:last-child{
+				margin-right: 0;
+			}
+			a{
+				text-decoration: none;
+				&:hover{
+					color: $color5;
+				}
+			}
+			&.active{
+				@include font-size(1.6);
+				color: $color5;
+				font-weight: bold;
+			}
+		}
+	}
+}
+/* =/subnav
+---------------------------*/
+
+
+/* =cat-gallery
+---------------------------*/
+.cat-gallery{
+	flex-wrap: wrap;
+	@include justify-content(space-between);
+	a{
+		flex-basis: 24%;
+		margin-bottom: 1.2rem;
+		position: relative;
+		img{
+			width: 100%;
+		}
+		&:hover{
+			&:after,
+			&:before{
+				opacity: 1;
+			}
+			.tooltip{
+				opacity: 1;
+			}
+		}
+		&:after,
+		&:before{
+			@extend .before;
+			@include transition-param(opacity);
+			opacity: 0;
+		}
+		
+		&:before{
+			background: url(../images/zoom.png) no-repeat;
+			width: 58px;
+			height: 58px;
+			z-index: 100;
+			left: 50%;
+			top: 50%;
+			margin-left: -28px;
+			margin-top: -38px;
+		}
+
+		&:after{
+			background-color: rgba(255, 255, 255, .75);
+			height: 100%;
+			left: 0;
+			top: 0;
+			width: 100%;
+			z-index: 99;
+		}
+
+		.tooltip{
+			@include transition-param(opacity);
+			@include font-size(1.6);
+			bottom: 10px;
+			color: $color5;
+			display: block;
+			left: 12px;
+			position: absolute;
+			z-index: 101;
+			opacity: 0;
+		}
+	}
+}
+/* =/cat-gallery
+---------------------------*/
+
+
+/* =pagination
+---------------------------*/
+.pagination{
+	@include font-size(1.8);
+	text-align: right;
+	margin: 2.3rem 0;
+	a, span{
+		display: inline-block;
+		text-decoration: none;
+		margin: 0 .3rem;
+	}
+	a:hover{
+		color: $color5;
+	}
+	span{
+		color: $color5;
+	}
+
+	.prev,
+	.next{
+		background: url(../images/prevnext.png) no-repeat left 0px;
+		height: 25px;
+		position: relative;
+		top: -2px;
+		vertical-align: top;
+		width: 9px;
+		&:hover{
+			background-position: -11px top;
+		}
+
+		&.disable{
+			background-position: -11px top;			
+		}
+	}
+
+	.prev{
+		@include rotation(180deg);
+	}
+}
+/* =/pagination
+---------------------------*/

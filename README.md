@@ -12,5 +12,5 @@ SASS файлы/каталоге нужны только в верстке, пр
 __Используемые в проекте js плагины__
 ---------------------------------------------------------
 * Карусель owl-carousel [http://www.owlcarousel.owlgraphic.com/](http://www.owlcarousel.owlgraphic.com/)
-* Всплывающая галерея Fancybox [http://fancyapps.com/fancybox/](http://fancyapps.com/fancybox/)
+* Всплывающая галерея Fancybox [http://fancyapps.com/fancybox/3/](http://fancyapps.com/fancybox/3/)
 * Сообщение для устаревших браузеров Outdated Browser v1.1.3[https://github.com/burocratik/outdated-browser](https://github.com/burocratik/outdated-browser) [Демо](http://outdatedbrowser.com/ru)

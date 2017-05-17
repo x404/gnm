@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,700i&subset=cyrillic,cyrillic-ext');
+  @import url(http://allfont.ru/allfont.css?fonts=bauhaus-light);
+
+/*** reset ***********/
+html,body,ul,ol,li,dl,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,a,img,label{margin:0;padding:0;border:0}
+header, section, footer, aside, nav, article {display:block}
+ul{list-style:none}
+$color1:#000;
+$color2:#fff;
+
+$color3:#f0f8ee;
+$color4:#e2e2e2;
+$color5:#208209;
+$color6:#e8e8e8;
+$color7:#5c5c5c;
+$color8:#398eab;
+$color9:#f1f8fb;
+$color10:#165267;
+
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%
+}
+
+
+body{
+	@include flexbox;
+	color: $color7;
+	flex-flow: column;
+	font-display: swap;
+	height: 100vh;
+	font-family: 'Roboto', sans-serif;
+	@include font-size(1.4);
+	@include rounded;
+}
+
+html, body{
+	height: 100%
+}
+
+
+*:focus{outline:none}
+
+input::-moz-focus-inner{
+	border: 0;
+	padding: 0;
+}
+
+
+.outerwrapper{
+	-webkit-flex: 1;
+	flex: 1;
+}
+
+/*** standart classes *****/
+a{color:#020000}
+h1{font-size:3.6rem}
+h2{font-size:1.8rem}
+h3{font-size:1.6rem}
+
+
+*:focus{outline:none}
+
+input::-moz-focus-inner{
+	border: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family: 'BauhausLightCTT';
+	src: url('../fonts/bauhauslightctt.woff') format('woff'),
+		 url('../fonts/bauhauslightctt.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'helveticaneuecyrbold';
+	src: url('../fonts/helveticaneuecyr-bold.woff2') format('woff2'),
+		 url('../fonts/helveticaneuecyr-bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+.tdn{
+	text-decoration: none;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+.tdu{
+	text-decoration: underline;
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+
+@mixin sprite($x:0, $y:0){
+	background-image: url(../images/sprite.png);
+	background-repeat: no-repeat;
+	background-position: $x $y;
+}
+
+.before{
+	content: "";
+	display: block;
+	position: absolute;
+}
+
+
+.form-control {
+   border: 1px solid $color3;
+   border-radius: 0;
+   margin-top: 0.6rem;
+	font-size: 16px;
+	&:focus,
+	&:active{
+		border-color: $color5;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(222, 72, 111, 0.3)
+	}
+}
+
+
+.flexbox{
+	@include flexbox;
+}
+
+.submit{
+	cursor: pointer;
+}
+
+
+.show-sm{
+	display: none;
+}
+
+
+.text-center{
+	text-align: center;
+}
+
+
+.navbar-toggle,
+.close-menu{
+	display: none;
+}
+
+
+/* =top
+---------------------------*/
+.top{
+	background: $color3;
+	padding: .6rem 0 .4rem;
+	border-bottom: 1px solid $color4;
+	text-align: right;
+	a{
+		display: inline-block;
+		background: url(../images/social-bg.png) no-repeat left top;
+		height: 25px;
+		width: 25px;
+		text-align: center;
+		img{
+			vertical-align: top;
+		}
+	}
+}
+/* =/top
+---------------------------*/
+
+
+
+/* =header
+---------------------------*/
+.header{
+	// padding: 1.5rem 0 2rem;
+	.flexbox{
+		@include justify-content(space-between);
+		@include align-items(center);
+		min-height: 96px;
+	}
+	.logo{
+		img{
+			vertical-align: top;
+		}
+	}
+	nav{
+		@include font-size(1.5);
+		ul{
+			@include flexbox;
+			@include align-items(center);
+			a{
+				text-decoration: none;
+			}
+			li{
+				position: relative;
+				padding-right: 2.3rem;
+				&.active{
+					@include font-size(1.8);
+					color: $color5;
+					cursor: default;
+					font-weight: bold;
+				}
+				&:last-child{
+					padding-right: 0;
+					&:after{
+						display: none;
+					}
+				}
+				&:after{
+					@extend .before;
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+					background-color: #424242;
+					right: .9rem;
+					top: 8px;
+				}
+				a{
+					@include transition-param(color);
+					&:hover{
+						color: $color5;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* =/header
+---------------------------*/
+
+
+
+/* =navigation
+---------------------------*/
+/* =/navigation
+---------------------------*/
+
+
+.owl-carousel{
+	.owl-controls{
+		position: absolute;
+		width: 100%;
+		top: 115px;
+		.owl-buttons{
+			.owl-prev,
+			.owl-next{
+				background: url(../images/prevnext.png) no-repeat left top;
+				width: 65px;
+				height: 65px;
+				position: absolute;
+			}
+			.owl-prev{
+				left: -110px;
+			}
+			.owl-next{
+				@include sprite;
+				// .rotation(180deg);
+				right: -110px;
+			}
+		}
+	}
+}
+
+/* =main
+---------------------------*/
+
+
+
+
+/* =footer
+---------------------------*/
+footer{
+	border-top: 1px solid $color4;
+	padding: 2.5rem 0;
+}
+/* =/footer
+---------------------------*/
+
+#to-top{
+	bottom: 13px;
+	left: 50%;
+	margin-left: 545px;
+	position: fixed;
+}
